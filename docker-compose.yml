@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: swiftcart_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=swiftcart
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - swiftcart_network
+
+volumes:
+  mongodb_data:
+
+networks:
+  swiftcart_network:
+    driver: bridge
