@@ -1,73 +1,150 @@
-# Welcome to your Lovable project
+# SwiftCart - E-commerce Frontend
 
-## Project info
+A modern, responsive e-commerce frontend built with React, TypeScript, Tailwind CSS, and React Router. Features a complete shopping experience with product browsing, cart management, user authentication, and checkout flow.
 
-**URL**: https://lovable.dev/projects/d2b4b55e-0d41-4301-abcb-7eeb8f5f4f0e
+## 🚀 Features
 
-## How can I edit this code?
+### 🛍️ Shopping Experience
+- **Product Catalog**: Browse products with search and category filtering
+- **Product Details**: Comprehensive product pages with images, descriptions, and reviews
+- **Shopping Cart**: Add, update, and remove items with real-time totals
+- **Checkout**: Complete checkout flow with address and payment forms
 
-There are several ways of editing your application.
+### 👤 User Management
+- **Authentication**: Login and registration with form validation
+- **Protected Routes**: Secure access to checkout and user-specific pages
+- **Order History**: View past orders and track status
+- **Admin Panel**: Admin-only order management interface
 
-**Use Lovable**
+### 🎨 Design & UX
+- **Responsive Design**: Mobile-first design that works on all devices
+- **Modern UI**: Clean, professional design with smooth animations
+- **Accessibility**: Proper ARIA labels and keyboard navigation
+- **Loading States**: User-friendly loading indicators and error handling
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d2b4b55e-0d41-4301-abcb-7eeb8f5f4f0e) and start prompting.
+## 🛠️ Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** with TypeScript for type-safe development
+- **Vite** for fast development and building
+- **React Router** for client-side routing
+- **Tailwind CSS** for responsive styling
+- **shadcn/ui** for consistent UI components
+- **React Hook Form** for form validation
+- **Axios** for API calls
+- **React Query** for state management
 
-**Use your preferred IDE**
+## 📦 Installation & Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd swiftcart-frontend
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Follow these steps:
+3. **Environment Setup**
+   ```bash
+   cp .env.example .env
+   ```
+   Update the environment variables as needed.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:8080](http://localhost:8080) to view the app.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏗️ Build & Deploy
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Build for production
+npm run build
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## 📱 Pages & Routes
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Public Routes
+- `/` - Home page with product catalog
+- `/product/:id` - Product detail page
+- `/cart` - Shopping cart
+- `/login` - User login
+- `/register` - User registration
 
-**Use GitHub Codespaces**
+### Protected Routes
+- `/checkout` - Checkout flow (requires login)
+- `/orders` - Order history (requires login)
+- `/admin` - Admin order management (requires admin role)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔧 Key Components
 
-## What technologies are used for this project?
+### Core Components
+- **Header**: Navigation with cart badge and user menu
+- **Footer**: Site-wide footer with links and company info
+- **ProductCard**: Reusable product display component
+- **QuantitySelector**: Interactive quantity input
+- **ProtectedRoute**: Route protection wrapper
 
-This project is built with:
+### Context Providers
+- **AuthContext**: User authentication state
+- **CartContext**: Shopping cart state management
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎯 Demo Features
 
-## How can I deploy this project?
+### Test User Accounts
+- **Regular User**: `user@example.com` / `password123`
+- **Admin User**: `admin@example.com` / `password123`
 
-Simply open [Lovable](https://lovable.dev/projects/d2b4b55e-0d41-4301-abcb-7eeb8f5f4f0e) and click on Share -> Publish.
+### Test Payment Information
+- **Card Number**: `4242 4242 4242 4242`
+- **Expiry**: Any future date (e.g., `12/28`)
+- **CVV**: Any 3 digits (e.g., `123`)
 
-## Can I connect a custom domain to my Lovable project?
+## 🔐 Security Features
 
-Yes, you can!
+- Form validation with error handling
+- Protected routes for authenticated users
+- Admin-only access control
+- Secure password input fields
+- Input sanitization and validation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎨 Design System
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The app uses a comprehensive design system with:
+- **Semantic Color Tokens**: Consistent color scheme across light/dark modes
+- **Custom Variants**: E-commerce specific button and component variants
+- **Responsive Grid**: Mobile-first responsive layouts
+- **Animation**: Smooth transitions and hover effects
+
+## 📊 Mock API Integration
+
+The app includes a complete mock API that simulates:
+- Product catalog management
+- Shopping cart operations
+- User authentication
+- Order creation and tracking
+- Admin functionality
+
+## 🚀 Future Enhancements
+
+- Real backend API integration
+- Payment gateway integration (Stripe)
+- Product reviews and ratings
+- Wishlist functionality
+- Advanced search and filtering
+- Real-time order tracking
+- Email notifications
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS
